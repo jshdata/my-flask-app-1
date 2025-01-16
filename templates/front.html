@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 프론트</title>
+    <link rel="icon" href="{{ url_for('static', filename='image/logo-icon.png') }}"/>
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='image/logo-icon.png') }}"/>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="inner">
+            <img class="logo" src="{{ url_for('static', filename='image/logo.png') }}"/>
+            <div>
+                <span class="menu-item">머신러닝</span>
+                <span class="menu-item">웹 프론트</span>
+                <span class="menu-item">웹 벡엔드</span>
+                <span class="menu-item">딥러닝</span>
+                <span class="menu-item">프로젝트</span>
+                <span class="menu-item">포트폴리오</span>
+            </div>                
+        </div>
+    </header>
+
+
+
+    <div class="top-container">
+        <img src="{{ url_for('static', filename='image/bg.jpg') }}"/>
+        <div class="overlay-container">
+            <span>제조기업기반</span>
+            <span>
+                <font style="color:#30a7ff;">빅데이터</font>
+                분석 실무 과정
+            </span>
+        </div>
+    </div>
+    
+
+    <div class="section">
+        <div class="inner">
+            
+            <div class="row">
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://grm-project-template-bucket.s3.ap-northeast-2.amazonaws.com/lecture/lec_gTaXd_1674112548939/coverImage.png?_=1674731792366"/>
+                        <span class="t1">머신러닝 기초</span>
+                        <span class="t2">회귀, 분류 따라하기</span>
+                        <p>
+                            특히 머신러닝 학습 모형은 
+                            SHAP(Shapley Additive Explanations) 
+                            기법을 통해 환자별 재입원 위험성과 주요 
+                            위험요인을 시각적으로 보여줄 수 있어 
+                            환자교육에 이용될 수 있고 의료진은 고
+                            위험 환자를 선별해 집중 관리를 하는데 
+                            활용할 수 있다.
+                        </p>
+
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                            학습하러가기
+                        </button>
+                    </nav>
+
+                </div>
+
+            
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <footer class="section" style="background: #dedede;">
+        <div class="inner" style="display: flex;">
+
+            <div class="info-card">
+                <span class="t">기술 스택</span>
+                <span>머신러닝</span>
+                <span>웹 프론트</span>
+                <span>웹 벡엔드</span>
+                <span>딥러닝</span>
+                <span>프로젝트</span>
+                <span>포트폴리오</span>
+            </div>
+
+            <div class="info-card">
+                <span class="t">기술 스택</span>
+                <span>머신러닝</span>
+                <span>웹 프론트</span>
+                <span>웹 벡엔드</span>
+                <span>딥러닝</span>
+                <span>프로젝트</span>
+                <span>포트폴리오</span>
+            </div>
+
+            <div class="info-card">
+                <span class="t">기술 스택</span>
+                <span>머신러닝</span>
+                <span>웹 프론트</span>
+                <span>웹 벡엔드</span>
+                <span>딥러닝</span>
+                <span>프로젝트</span>
+                <span>포트폴리오</span>
+            </div>
+            
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

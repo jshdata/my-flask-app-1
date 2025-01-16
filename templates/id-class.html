@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+</head>
+
+<style>
+    .my-box{
+        width: 200px;
+        height:50px;
+        background: blue;
+        margin-bottom: 20px;
+    }
+
+    .my-box.gray{
+        background: gray;
+    }
+
+    .round{
+        border-radius: 20px;
+        background: green;
+    }
+
+    #one-box{
+        width: 50px;
+        height: 50px;
+        background: #000;
+        margin-bottom: 20px;
+    }
+
+    
+
+    .parent-box .box{
+        background: pink;
+    }
+
+</style>
+
+
+<body>
+
+    <h1>아이디, 클래스</h1>
+
+
+
+    <div class="parent-box">
+
+        <div>
+            <span class="box">span 1</span>  
+            <span class="box">span 2</span>
+            <span class="box">span 3</span>      
+        </div>
+
+        
+    </div>
+    <span>span 4</span>
+
+
+
+
+    <div id="one-box" class="test" style="background: red;"></div>
+    <div id="one-box"></div>
+
+
+    <div class="my-box good" id="one"></div>
+    <div class="round my-box"></div>
+    <div class="my-box"></div>
+    <div class="my-box"></div>
+    <div class="my-box"></div>
+    <div class="my-box gray"></div>
+
+
+</body>
+</html>
