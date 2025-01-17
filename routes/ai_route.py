@@ -5,6 +5,8 @@ import joblib
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import os
+from sklearn.preprocessing import LabelEncoder
+from db import get_db_connection
 
 ai_route = Blueprint('ai',__name__)
 
@@ -12,10 +14,23 @@ ai_route = Blueprint('ai',__name__)
 # 모델 로드
 lin_reg = joblib.load('house_price_model-lin.pkl')
 rf = joblib.load('house_price_model-rf.pkl')
+cat_dog_model = tf.keras.models.load_model('cats_and_dogs_classifier.h5')
 
-model = tf.keras.models.load_model('cats_and_dogs_classifier.h5')
 
-# 이미지 전처리 함수 : 모델학습할 때 진행한 전처리
+car_damage_model = tf.keras.models.load_model('car_damage_classifier.h5')
+damage_classes = ["Breakage", "Crushed", "Scratch", "Separated"]
+label_encoder = LabelEncoder()
+label_encoder.fit(damage_classes)
+
+# 비용 데이터 정의
+costs = {
+    "Breakage": 200000,
+    "Crushed": 100000,
+    "Scratch": 50000,
+    "Separated": 150000,
+}
+
+# 이미지 전처리 함수
 def load_and_preprocess_image(img_path):
     img = image.load_img(img_path, target_size=(150, 150))  # 모델에 맞는 크기로 조정
     img_array = image.img_to_array(img)
@@ -23,7 +38,44 @@ def load_and_preprocess_image(img_path):
     img_array = img_array / 255.0  # 스케일 조정
     return img_array
 
-cat_dog_model = tf.keras.models.load_model('cats_and_dogs_classifier.h5')
+# 차량 손상 예측
+@ai_route.route("/predict-car-damage", methods=['post'])
+def predict_damage():
+    if 'image' not in request.files:
+        return jsonify({"error": "No image file provided"}), 400
+
+    # 이미지 파일 저장
+    image_file = request.files['image']
+    file_path = os.path.join("uploads", image_file.filename)
+    os.makedirs("uploads", exist_ok=True)
+    image_file.save(file_path)
+
+    # 이미지 전처리 및 예측
+    try:
+        preprocessed_img = load_and_preprocess_image(file_path)
+        prediction = car_damage_model.predict(preprocessed_img)
+        predicted_class_index = np.argmax(prediction, axis=1)[0]
+        predicted_label = label_encoder.inverse_transform([predicted_class_index])[0]  # 레이블 변환
+
+        # 비용 산정
+        cost = costs.get(predicted_label, "비용 정보 없음")
+
+        # 결과 반환
+        result = {
+            "damage": predicted_label,
+            "cost": cost
+        }
+
+        # 처리 후 임시 파일 삭제
+        os.remove(file_path)
+
+        return jsonify(result)
+
+    except Exception as e:
+        return jsonify({"error": f"예외 발생: {str(e)}"}), 500
+
+
+
 
 
 # 고양이, 강아지
