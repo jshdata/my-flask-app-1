@@ -13,13 +13,13 @@ import numpy as np
 view_route = Blueprint('view_route', __name__)
 
 
-@view_route.route("/car-damage")
-def CarDamage():
-    return render_template("car-damage.html")
+# @view_route.route("/car-damage")
+# def CarDamage():
+#     return render_template("car-damage.html")
 
-@view_route.route("/dog-cat")
-def DogCat():
-    return render_template("dog-cat.html")
+# @view_route.route("/dog-cat")
+# def DogCat():
+#     return render_template("dog-cat.html")
 
 @view_route.route("/house")
 def House():
